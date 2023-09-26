@@ -8,8 +8,7 @@ import pages.HomePage;
 import java.util.logging.Handler;
 
 public class LogoutTest extends BaseTests{
-    HomePage homePage;
-    WebDriver driver;
+
     @Test
     public void testValidLogout(){
         driver = getDriver();

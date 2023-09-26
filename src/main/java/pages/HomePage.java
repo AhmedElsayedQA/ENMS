@@ -8,6 +8,9 @@ public class HomePage {
    private By adminDropdown= By.id("logout") ;
     private By logoutButton=By.xpath("//a[ text()=\" Logout\"]");
 
+    private By addDashboardDropdown=By.id("addDashboard");
+    private By addDashboardButton=By.xpath("//a[text()='Dashboard']");
+
    public  HomePage(WebDriver driver){
        this.driver=driver;
    }
@@ -23,4 +26,13 @@ public class HomePage {
        driver.findElement(logoutButton).click();
    }
 
+
+   public void openAddDashboardDropdown(){
+       driver.findElement(addDashboardDropdown).click();
+
+   }
+   public AddDashboardPage clickAddDashboardButton(){
+       driver.findElement(addDashboardButton).click();
+       return new AddDashboardPage(driver);
+   }
 }

@@ -7,15 +7,19 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
+import pages.AddDashboardPage;
+import pages.HomePage;
 import pages.LoginPage;
 
 import java.time.Duration;
 
 public class BaseTests {
-    private WebDriver driver;
+    protected WebDriver driver;
     private String baseURL="http://192.168.125.30:8080/#/";
 //    private WebDriverWait wait;
     protected LoginPage loginPage;
+    protected HomePage homePage;
+    protected AddDashboardPage addDashboardPage;
 
     @BeforeMethod
     public void setUp(){
